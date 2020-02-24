@@ -1,0 +1,89 @@
+#section-one > .container {
+  @include mq-xs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 344px;
+    height: 100%;  
+  }
+  @include mq-lg {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;  
+  }
+}
+
+#section-one .left {
+  @include mq-xs {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem; 
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    border: 10px solid get( $palette, darks, base );  
+  }
+  @include mq-lg {
+    width: 1200px;
+  }
+}
+
+#section-one .right {
+  @include mq-xs {
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 400px;
+    max-height: 400px;
+    box-sizing: border-box;
+    border: 10px solid get( $palette, darks, base );
+  }
+  @include mq-lg { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+
+#section-one h1 {
+  @include mq-xs {
+    font-family: sans-serif;
+    font-size: 4rem;
+    line-height: 4.35rem;
+    margin: 0;
+    padding: 0;
+    color: get( $palette, darks, base );
+  }
+}
+
+#section-one h3 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP';
+  font-weight: 400;
+  font-size: 9vh;
+  line-height: 1.15;
+  font-weight: thin;
+  text-align: center;
+  color: get( $palette, darks, base );
+}
+
+// Mosaic container
+
+.mosaic {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mask {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba( 0, 0, 0, 0.55 );
+}
