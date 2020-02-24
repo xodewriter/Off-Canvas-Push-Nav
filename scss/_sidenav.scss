@@ -1,0 +1,49 @@
+// Hamburger button to push menu
+// Usage: include either burger, burger-left, or burger-right
+// Don't: change the HTML attribute
+@include burger-left;
+
+// sidenav Variables
+$sidenav-size    : 250px; // Controls amount to push menu
+
+#sidenav {
+  z-index: 9998;
+  position: absolute;
+  left: -$sidenav-size; // negative amount
+  background: get( $palette, darks, base );
+  width: $sidenav-size;
+  height: 100%;
+  min-height: 100vh;
+}
+
+// Container to hold to fixed position so nav sticks to top
+
+#sidenav > .container {
+  position: fixed;
+  top: 0;
+  width: $sidenav-size;
+}
+
+#sidenav .header  {
+  margin: 0;
+  padding: 70px 0 14px 10px;
+  background: get( $palette, primary, base );
+}
+
+#sidenav h3 {
+  margin: 0;
+  padding: 7px 6px;
+  border-left: 3px solid get( $palette, primary, darker );
+  color: get( $palette, primary, darkest );
+}
+
+#sidenav a {
+  display: block;
+  padding: 12px 0 12px 21px;
+  color: get( $palette, lights, darkest );
+  border-bottom: 1px solid hsl(90, 1%, 20%);
+
+}
+#sidenav a:hover {
+  background: get( $palette, darks, light );
+}

@@ -1,0 +1,72 @@
+#topnav {
+  transition-duration: 0s;
+  @include mq-xs {
+    // Hides topnav
+    position: absolute;
+    top: 100px;
+    pointer-events: none;
+    opacity: 0;
+  }
+  @include mq-md {
+    // Makes topnav visible
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    // Rest of the properties
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    box-shadow: 0px -2px 12px get( $palette, lights, darkest );
+  }
+}
+
+#topnav > .container {
+  @include mq-md {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    // try to match 8vw padding on section container
+    // 8vw + 8vw = 16%; 100% - 16% = 84%
+    width: 84%;  
+    height: 100%;
+  }
+ }
+
+#topnav .logo {
+  cursor: pointer;
+  margin: 0;
+  padding: 16px 20px;
+  color: get( $palette, lights, dark );
+  // border: 2px solid get( $palette, lights, dark );
+  font-weight: 500;
+  color: get( $palette, primary, darkest );
+  background: get( $palette, primary, base );
+}
+
+#topnav .logo:hover {
+  background: get( $palette, primary, light );
+}
+
+#topnav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: get( $palette, primary, darkest );
+}
+
+#topnav a:hover {
+  color: get( $palette, primary, dark );
+}
+
+
+// States
+
+.closed {
+  // Needs !important to force position to stay if user expands menu while open so the other class wont  over-ride this
+  top: -100px !important;
+  opacity: 100%;
+  pointer-events: none;
+}

@@ -1,0 +1,33 @@
+%container {
+  padding: 4vh 8vw;
+  min-height: 100vh;
+}
+
+// Inspired by https://leaverou.github.io/css3patterns/#cross-dots
+
+%cross-dots {
+  background:
+    radial-gradient( get( $palette, darks, light) 3px, transparent 4px),
+    radial-gradient( get( $palette, darks, light ) 3px, transparent 4px),
+    linear-gradient( get( $palette, lights, lightest ) 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, 
+      get( $palette, darks, light ) 75px,
+      get( $palette, darks, light ) 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, 
+      get( $palette, darks, darkest ) 76px, transparent 77px, transparent 78px, transparent 109px),
+      get( $palette, lights, lightest );
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+%cross-dots--reverse {
+  background:
+    radial-gradient( get( $palette, primary, lightest ) 3px, transparent 4px),
+    radial-gradient( get( $palette, primary, lightest ) 3px, transparent 4px),
+    linear-gradient( get( $palette, primary, darkest ) 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, get( $palette, primary, dark ) 76px, transparent 77px, transparent 78px, transparent 109px),
+  get( $palette, primary, darkest );
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}

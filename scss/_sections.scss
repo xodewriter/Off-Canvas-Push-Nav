@@ -1,0 +1,14 @@
+section {
+  @include mq-xs {
+    padding: 10vh 8vw;
+  }
+  @include mq-sm {
+    padding: 12vh 8vw;
+  }
+  @include mq-md {
+    padding: 14vh 8vw;
+  }
+  @include mq-md {
+    padding: 16vh 8vw;
+  }
+}
