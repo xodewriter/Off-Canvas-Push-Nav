@@ -1,0 +1,17 @@
+$body-left: $nav-push-amount; // Controls amount to push on menu open
+
+body {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: get( $palette, lights, base );
+}
+
+body.open {
+  left: $body-left;
+  background: rgba( 0, 0, 0, 0.8 );
+}
