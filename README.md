@@ -1,6 +1,6 @@
 # Off-Canvas-Push-Nav
 
-Off Canvas Push Navigation Menu
+https://jlampstack.github.io/Off-Canvas-Push-Nav/
 
 Use config.scss variable to control the size / amount you want sidenav to open up by.
 
